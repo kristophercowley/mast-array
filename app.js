@@ -1,18 +1,35 @@
 //Write a function called cubed(x) that accepts an argument x and returns its cubed value
+function cubed(x){
+    return x * x * x;
+}
 
 //write a function called power that accepts two args (base, exp) and returns the power  
-
+function power(base, exp){
+    var result = base;
+    for (var i = 0; i < exp.length; i++) {
+        result = result * base;    
+    }return result;
+}
 /*
 * write a function called logArr that will log each item in an array
 */
-
+function logArr(array){
+    for (var i = 0; i < array.length; i++) {
+        console.log(array[i]);       
+    }
+}
 /**
     Fill in the necessary parts of the findById function below
 */
 var users = [{id: 1, name: 'Jon'},{id: 2, name: 'Yuli'},{id: 21, name: 'Peter'},{id: 17, name: 'St. MaryLou de la playa carmen'},{id: 51, name: 'Doug'},{id: 881, name: 'Paul'},{id: 0, name: 'Jon'},{id: 999, name: 'Timma'}]
 
 function findById(id){
-
+for (var i = 0; i < users.length; i++) {
+    if (users[i].id === id) {
+        return users[i];
+    }
+    
+}
 }
 findById(17) //Should return {id: 17, name: 'St. MaryLou de la playa carmen'}
 findById(1000) //Should return 4 {error: 'Sorry that user id could not be found'} ****Upshift Challenge
@@ -34,6 +51,14 @@ var theBand = {
     }]
 }
  
+ function find(name){
+     for (var i = 0; i < theBand.length; i++) {
+         if (theBand[i].name === name) {
+          return theBand[i].name + " is in the band and plays the " + theBand[i].instrument;   
+         }
+         
+     }
+ }
 //write a fn that accepts two arguments a (sentence, letter) have the function return the number of times that letter repeats in the sentence
 
 
