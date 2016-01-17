@@ -72,9 +72,19 @@ var theBand = {
 */
 
 //Write a CellPhone constructor function that accepts the following arguments (string: brand, number: screenSize, string: carrier)
-
+function CellPhone(brand,screenSize,carrier){
+    this.brand = brand;
+    this.screenSize = screenSize;
+    this.carrier = carrier;
+}
+var myPhone = new CellPhone("HTC",4,"T-Mobile");
 //Write a function called sumAll that accepts an array of numbers and returns the sum of all items in the array
-
+function sumAll(array){
+    var sum = 0;
+    for (var i = 0; i < array.length; i++) {
+    sum += array[i];      
+    }return sum;
+}
 //write an isEqual function that accepts two arguments and returns a boolean (3,'3') returns false ('abc', 'abc') returns true
 
 //write a function called inStock that accepts a productId or productName and returns the product if it is in stock based on its quantity
