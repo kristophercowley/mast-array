@@ -86,8 +86,21 @@ function sumAll(array){
     }return sum;
 }
 //write an isEqual function that accepts two arguments and returns a boolean (3,'3') returns false ('abc', 'abc') returns true
-
+function isEqual(a,b){
+    if (a === b) {
+        return true;
+    }else {
+        return false;
+    }
+}
 //write a function called inStock that accepts a productId or productName and returns the product if it is in stock based on its quantity
+function inStock(name){
+    for (var i = 0; i < products.length; i++) {
+        if (products[i].name === name && products[i].quantity > 0) {
+            return products[i];         
+    }
+   
+}
 
 var products =[{
     id: 123,
