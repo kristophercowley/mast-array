@@ -25,13 +25,11 @@ var users = [{ id: 1, name: 'Jon' }, { id: 2, name: 'Yuli' }, { id: 21, name: 'P
 
 function findById(id) {
     for (var i = 0; i < users.length; i++) {
-        if (users[i].id === id) {
-            return users[i];
-        }else {
-            return "error: this person could not be found"
+        var currentUser = users[i];
+        if (currentUser.id === id) {
+            return currentUser;
         }
-
-    }
+    }return "error: this person could not be found";
 }
 findById(17) //Should return {id: 17, name: 'St. MaryLou de la playa carmen'}
 findById(1000) //Should return 4 {error: 'Sorry that user id could not be found'} ****Upshift Challenge
