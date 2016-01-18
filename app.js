@@ -6,8 +6,8 @@ function cubed(x) {
 //write a function called power that accepts two args (base, exp) and returns the power  
 function power(base, exp) {
     var result = base;
-    for (var i = 0; i < exp.length; i++) {
-        result = result * base;
+    for (var i = 1; i < exp; i++) {
+        result *= base;
     } return result;
 }
 /*
@@ -27,6 +27,8 @@ function findById(id) {
     for (var i = 0; i < users.length; i++) {
         if (users[i].id === id) {
             return users[i];
+        }else {
+            return "error: this person could not be found"
         }
 
     }
@@ -52,9 +54,9 @@ var theBand = {
 }
 
 function find(name) {
-    for (var i = 0; i < theBand.length; i++) {
-        if (theBand[i].name === name) {
-            return theBand[i].name + " is in the band and plays the " + theBand[i].instrument;
+    for (var i = 0; i < theBand.members.length; i++) {
+        if (theBand.members[i].name === name) {
+            return theBand.members[i].name + " is in the band and plays the " + theBand.members[i].instrument;
         }
 
     }
@@ -107,14 +109,14 @@ function isEqual(a, b) {
     }
 }
 //write a function called inStock that accepts a productId or productName and returns the product if it is in stock based on its quantity
-function inStock(name) {
+function inStock(id) {
     for (var i = 0; i < products.length; i++) {
-        if (products[i].name === name && products[i].quantity > 0) {
+        if (products[i].id === id && products[i].quantity > 0) {
             return products[i];
         }
 
     }
-
+}
     var products = [{
         id: 123,
         name: 'Squaty Potty',
